@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        $nome = prompt("Qual seu nome ?")
+        document.writeln("O nome digitado foi " + $nome)
+        document.writeln("<br>")
+        $sexo = prompt("Qual seu sexo [M] ou [F]?")
+        document.writeln("Sexo = ")
+        if (($sexo == "m") || ($sexo == "M")) {
+            document.writeln("Masculino")
+        }
+        else {
+            document.writeln("Feminino")
+        }
+        document.writeln("<br>")
+        $idade = prompt("Qua sua idade?")
+        document.writeln("Idade = " + $idade)
+        document.writeln("<br><br>")
+        if ($idade <= 18) {
+            document.writeln("Você é maior de idade")
+        }
+        else {
+            document.writeln("Você é menor de idade")
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
