@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //PERGUNTAS PARA DEFINIR AS VARIAVEIS
+        $nome = prompt("Qual seu nome?")
+        $idade = prompt("Qua sua idade?")
+        $sexo = prompt("Qual seu sexo [M] ou [F]?")
+
+        //SE O GENÊRO FOR PREENCHIDO CORRETAMENTE O CÓDIGO CONTINUARÁ
+        if (($sexo == "m") || ($sexo == "M") || ($sexo == "f") || ($sexo == "F")) {
+
+            document.writeln("<center>")
+
+            //TITULO
+            document.writeln("<h1>TABELA GENÊRO E IDADE</h1>")
+
+            //PRIMEIRA LINHA DA TABELA
+            document.write("<table border='1' bgcolor='black'>")
+            document.write("<tr border='1' width='1200' align=center bgcolor='yellow'>")
+            document.write("<td width= '300'> NOME </td>")
+            document.write("<td width= '300'> GENÊRO</td>")
+            document.write("<td width= '300'> IDADE</td>")
+            document.write("<td width= '300'> FOTO</td>")
+            document.write("</tr>")
+
+            //SE O SEXO FOR MASCULINO
+            if (($sexo == "m") || ($sexo == "M")) {
+
+                //TABELA MENINO
+                if ($idade <= 17) {
+                    document.write("<tr border='1' align=center bgcolor='white'>")
+                    document.write("<td>" + $nome)
+                    document.write("</td>")
+                    document.write("<td> Masculino")
+                    document.write("</td>")
+                    document.write("<td>" + $idade)
+                    document.write("</td>")
+                    document.write("<td width= '100'> <img src='img/MENINO.jpeg' width= '75%'> </td>")
+                    document.write("</table>")
+
+
+                }
+
+                //TABELA HOMEM
+                else {
+                    document.write("<tr border='1' width='1200' align=center bgcolor='white'>")
+                    document.write("<td>" + $nome + "</td>")
+                    document.write("<td>" + $sexo + "</td>")
+                    document.write("<td> Masculino </td>")
+                    document.write("<td width= '100'> <img src='img/HOMEM.jpg' width= '75%>  </td>")
+                    document.write("</table>")
+                }
+            }
+
+            //SE O SEXO FOR FEMININO
+            if (($sexo == "f") || ($sexo == "F")) {
+
+                //TABELA MENINA
+                if ($idade <= 17) {
+                    document.write("<tr border='1' width='1200' align=center bgcolor='white'>")
+                    document.write("<td>" + $nome + "</td>")
+                    document.write("<td> Feminino </td>")
+                    document.write("<td>" + $idade + "</td>")
+                    document.write("<td width= '100'> <img src='img/MENINA.jpg' width='75%'>  </td>")
+                    document.write("</table>")
+                }
+
+                //TABELA MULHER
+                else {
+                    document.write("<tr border='1' width='1200' align=center bgcolor='white'>")
+                    document.write("<td>" + $nome + "</td>")
+                    document.write("<td> Feminino </td>")
+                    document.write("<td>" + $idade + "</td>")
+                    document.write("<td width= '100'> <img src='img/MULHER.jpg' width='75%'>  </td>")
+                    document.write("</table>")
+                }
+            }
+        }
+
+        //SE O GENÊRO NÃO FOR PREENCHIDO CORRETAMENTE A PESSOA DEVE ATUALIZAR O SITE E RESPONDER NOVAMENTE
+        else {
+            alert("GENÊRO INDISPONIVEL ATUALIZE O SITE E TENTE [M] ou [F]")
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
