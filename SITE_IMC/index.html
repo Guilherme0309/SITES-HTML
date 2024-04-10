@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+//OBTENDO ALTURA E PESO
+        $altura = prompt("INSIRA SUA ALTURA (CM):")
+        $peso = prompt("INSIRA SEU PESO (KG):")
+
+        //CALCULO IMC
+        $imc = $peso / (($altura / 100) * ($altura / 100))
+
+        
+        //EXIBINDO IMC
+        alert("SEU IMC É: " + $imc)
+
+        //BOTÃO DE RECARREGAR
+        document.write("<a> href ='../index.html'> <img src='img/recarrecar.png' width='2%''> </a>")
+
+        //TABELA
+        document.write("<center><h1><font color='red'>TABELA CALCULO IMC </font></h1>")
+        document.write("<table bgcolor='black'>")
+        document.write(" <tr bgcolor='yellow'>")
+        document.write("<td>ALTURA</td>")
+        document.write("<td>PESO</td>")
+        document.write("<td>IMC</td>")
+        document.write("<td>CLASSIFICAÇÃO</td>")
+        document.write("</tr>")
+
+
+        //EXIBINDO BAIXO PESO 
+        if ($imc < 18.5) {
+
+            document.write("<tr bgcolor='white'>")
+            document.write("<td>", $altura, "</td>")
+            document.write("<td>", $peso, "</td>")
+            document.write("<td>ABAIXO DE 18,5 </td>")
+            document.write("<td>BAIXO PESO</td>")
+            document.write("</tr>")
+            document.write("</table>")
+            document.write("<br><br>")
+            document.write("<img src='img/ABAIXO DO PESO.webp' width='200px'>")
+
+        }
+
+        //EXIBINDO PESO ADEQUADO
+        if (($imc > 18.49) && ($imc < 25)) {
+
+            document.write(" <tr bgcolor='white'>")
+            document.write("<td>", $altura, "</td>")
+            document.write("<td>", $peso, "</td>")
+            document.write("<td>DE 18,5 A 24,9 </td>")
+            document.write("<td>PESO ADEQUADO</td>")
+            document.write("</tr>")
+            document.write("</table>")
+            document.write("<br><br>")
+            document.write("<img src='img/ADEQUADO.avif' width='200px'>")
+        }
+
+        //EXIBINDO SOBREPESO
+        if (($imc > 24.99) && ($imc < 30)) {
+            document.write(" <tr bgcolor='white'>")
+            document.write("<td>", $altura, "</td>")
+            document.write("<td>", $peso, "</td>")
+            document.write("<td>DE 25 A 29,9 </td>")
+            document.write("<td>SOBREPESO</td>")
+            document.write("</tr>")
+            document.write("</table>")
+            document.write("<br><br>")
+            document.write("<img src='img/ACIMA DO PESO.webp' width='200px'> ")
+        }
+
+        //EXIBINDO OBESIDADE
+        if ($imc > 29.99) {
+            document.write(" <tr bgcolor='white'>")
+            document.write("<td>", $altura, "</td>")
+            document.write("<td>", $peso, "</td>")
+            document.write("<td>ACIMA DE 29,9 </td>")
+            document.write("<td>OBESO</td>")
+            document.write("</tr>")
+            document.write("</table>")
+            document.write("<br><br>")
+            document.write("<img src='img/OBESO.jpg' width='200px'>")
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
