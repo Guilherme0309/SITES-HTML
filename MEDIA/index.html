@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        $num1 = prompt("ESCREVA SUA 1º NÚMERO")
+        $num2 = prompt("ESCREVA SUA 2º NÚMERO")
+        $num3 = prompt("ESCREVA SUA 3º NÚMERO")
+
+        $media = ((parseInt($num1)) + (parseInt($num2)) + (parseInt($num3))) /3
+
+
+        document.write("<center>  <h1> CALCULADOR DE MÉDIA </font> <h1> ")
+
+        document.write("<table border='1' width='800' bgcolor='black'>")
+        document.write("<tr bgcolor='yellow'>")
+        document.write("<td> <h4> <center> NÚMERO 1 </td> ")
+        document.write("<td> <h4> <center> NÚMERO 2 </td> ")
+         document.write("<td> <h4> <center> NÚMERO 3 </td>")
+            document.write("<td> <h4> <center> MÉDIA </td> </tr>")
+            document.write("<tr bgcolor='white'>")
+            document.write("<td> <h4> <center>", $num1, "</td>")
+                document.write("<td> <h4> <center>", $num2, "</td>")
+                    document.write("<td> <h4> <center>", $num3, "</td>")
+
+        document.write("<td> <h4>", $media.toFixed (2), "</h4> </td> </tr> </center>")
+
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
