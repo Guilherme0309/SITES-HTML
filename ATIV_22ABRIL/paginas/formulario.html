@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        function enviarFormulario() {
+
+
+
+            $nome = this.Form2.fNome.value
+            $idade = this.Form2.fIdade.value
+            $sexo = this.Form2.fSexo.value
+            $curso = this.Form2.fCurso.value
+            $turno = this.Form2.fTurno.value
+            $prof1 = this.Form2.fProf1.value
+            $prof2 = this.Form2.fProf2.value
+            $disc = ""
+
+            if (this.Form2.html.checked) {
+                $disc = $disc + "HTML/"
+            }
+
+            if (this.Form2.javascript.checked) {
+                $disc = $disc + "JavaScript/"
+            }
+
+            if (this.Form2.arduino.checked) {
+                $disc = $disc + "Arduino/"
+            }
+            if (this.Form2.logica.checked) {
+                $disc = $disc + "Lógica/"
+            }
+            if (this.Form2.gestalt.checked) {
+                $disc = $disc + "Gestalt/"
+            }
+
+
+            document.write("<center> <font size='8' face='arial'> <b> DADOS </b> </center> <br> ")
+            document.write("<font size='4'>")
+            document.write("<b> NOME: </b>" + $nome + " ," + $idade + " anos")
+            document.write("<br>")
+            document.write("<b> SEXO: </b>" + $sexo)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("<b> CURSO: </b>" + $curso + " (" + $turno + ")")
+            document.write("<br>")
+            document.write("<br>")
+            document.write("<b> PROFESSOR 1: </b>" + $prof1)
+            document.write("<br>")
+            document.write("<b> PROFESSOR 2: </b>" + $prof2)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("<b> DISCIPLINAS FAVORITAS: </b>" + $disc)
+
+
+
+            return false
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <font face="arial">
+
+        <font size="8">
+            <center>
+                <b> FORMULARIO </b>
+            </center>
+
+            <font size="3">
+
+                <br>
+
+
+                <table border="0" width="1270">
+
+
+                    <form name="Form2" action="" method="post" onsubmit=" return enviarFormulario()">
+
+                        <tr>
+                            <td height="30">
+                                <b>
+                                    Nome: <input type="text" name="fNome" size="23">
+                                </b>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td height="30">
+                                <b>
+                                    Idade: <input type="text" name="fIdade" size="23">
+                                </b>
+                            </td>
+
+                            <td height="30">
+                                <br>
+                                <b>
+                                    Sexo:
+                                </b>
+                                Masculino: <input type="radio" name="fSexo" value="Masculino">
+                                Feminino: <input type="radio" name="fSexo" value="Feminino">
+                                <br> <br>
+
+                            </td>
+
+                        <tr>
+                            <td height="30">
+                                <b>
+                                    Curso: <select name="fCurso">
+                                        <option value="emBranco"> Escolha uma opção abaixo </option>
+                                        <option value="DS"> DS </option>
+                                        <option value="Mecânica"> Mecânica </option>
+                                        <option value="Solda"> Solda </option>
+                                        <br> <br>
+
+                                    </select>
+
+                            </td>
+
+                            <td height="30">
+                                <b>
+                                    Turno: <select name="fTurno">
+                                        <option value="emBranco"> Escolha uma opção abaixo </option>
+                                        <option value="Manhã"> Manhã </option>
+                                        <option value="Tarde"> Tarde </option>
+                                        <option value="Noite"> Noite </option>
+                                        <br> <br>
+
+                            </td>
+                        </tr>
+
+
+                </table>
+
+                <br>
+
+                <table border="0" width="1270">
+
+                    <tr>
+                        <td height="30">
+                            <b>
+                                Professor 1: <select name="fProf1">
+                                    <option value="emBranco"> Escolha uma opção abaixo </option>
+                                    <option value="Ricardo"> Ricardo Corrêa </option>
+                                    <option value="Calu"> Lucas Calu </option>
+                                    <br> <br>
+
+                                </select>
+
+                        </td>
+
+                        <td height="30">
+                            <b>
+                                Professor 2: <select name="fProf2">
+                                    <option value="emBranco"> Escolha uma opção abaixo </option>
+                                    <option value="Ricardo"> Ricardo Corrêa </option>
+                                    <option value="Calu"> Lucas Calu </option>
+
+                                    <br> <br>
+                                    <br> <br>
+
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td>
+                            <br>
+                            <b>
+                                <font size="4"> Disciplina que mais gosta: </font>
+                            </b>
+                            <br>
+                            <font size="3"><br>
+                                <input type="checkbox" name="html"> HTML <br>
+                                <input type="checkbox" name="javascript"> JavaScript <br>
+                                <input type="checkbox" name="arduino"> Arduino <br>
+                                <input type="checkbox" name="logica"> Lógica <br>
+                                <input type="checkbox" name="gestalt"> Gestalt <br>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border="0" width="1270">
+
+                    <tr>
+                        <td width="570" align="right">
+                            <input type="submit" value="GRAVAR">
+
+                        </td>
+
+                        <td>
+                            <input type="reset" value="LIMPAR"> <br>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://127.0.0.1:5500/index.html"> Volte para a página de login</a>
+                        </td>
+                    </tr>
+
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function senai() {
+
+            $nome = this.Form1.fNome.value;
+
+            $senha = this.Form1.fSenha.value;
+
+            if (($nome == "Guilherme") && ($senha == "1234")) {
+                window.location.href = "http://127.0.0.1:5500/paginas/formulario.html"
+                return false;
+            }
+            else {
+
+                window.location.href = "http://127.0.0.1:5500/paginas/erro.html"
+                return false;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <font face="arial">
+
+        <br><br><br><br><br><br><br><br><br>
+
+        <table border="0" width="1270">
+            <tr>
+                <td>
+                    <font size="8">
+                        <center>
+                            <b> LOGIN </b>
+                        </center>
+                </td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <table border="0" width="1270">
+            <form name="Form1" action="" method="post" onsubmit="return senai()">
+                <font size="6">
+                    <tr>
+                        <td width="570" align="right">
+                            <b>
+                                NOME:
+                            </b>
+                        </td>
+
+                        <td>
+                            <br>
+                            <input type="text" name="fNome" size="23"> <br> <br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">
+                            <b>
+                                SENHA:
+                            </b>
+                        </td>
+
+                        <td>
+                            <br>
+                            <input type="password" name="fSenha" size="23"> <br> <br>
+                        </td>
+                    </tr>
+        </table>
+
+        <br>
+
+        <table border="0" width="1270">
+            <tr>
+                <td>
+                    <center>
+
+                        <input type="submit" value="GRAVAR">
+                        </form>
+                </td>
+            </tr>
+        </table>
+
+
+</body>
+
+</html>
